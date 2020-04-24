@@ -50,8 +50,8 @@ for f1, f2 in zip(args.read1, args.read2):
 	h2 = fmt_chk(f2)
 	for line1 in h1:
 		line2 = h2.next()
-		write_outfile(h1, o1, gzip=args.gzip)
-		write_outfile(h2, o2, gzip=args.gzip)
+		write_outfile(line1, o1, gzip=args.gzip)
+		write_outfile(line2, o2, gzip=args.gzip)
 	h1.close()
 	h2.close()
 o1.close()
