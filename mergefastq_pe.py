@@ -23,12 +23,12 @@ def write_outfile(content_str, handle, gzip=False):
 	else:
 		handle.write(content_str)
 
-parser = argparse.ArgimentParser()
-parser.add_argument("-i", "--read1", type=str, action="append", help="Read1 file. Can be applied many")
-parser.add_argument("-I", "--read2", type=str, action="append", help="Read2 file. Can be applied many")
-parser.add_argument("-o", "--out1", type=str, help="Output file1")
-parser.add_argument("-O", "--out2", type=str, help="Output file2")
-parser.add_argument("-g", "--gzip", type=str, help="Output gzip file")
+parser = argparse.ArgumentParser()
+parser.add_argument("-i", "--read1", type=str, action="append", help="Read1 file. Can be applied many", required=True)
+parser.add_argument("-I", "--read2", type=str, action="append", help="Read2 file. Can be applied many", required=True)
+parser.add_argument("-o", "--out1", type=str, help="Output file1", required=True)
+parser.add_argument("-O", "--out2", type=str, help="Output file2",required=True)
+parser.add_argument("-g", "--gzip", help="Output gzip file",default=False,action="store_true")
 
 args = parser.parse_args()
 
@@ -45,7 +45,7 @@ else:
 
 print ("start....")
 for f1, f2 in zip(args.read1, args.read2):
-	print("%s | %s".%(f1,f2)
+	print("%s | %s"%(f1,f2))
 	h1 = fmt_chk(f1)
 	h2 = fmt_chk(f2)
 	for line1 in h1:
