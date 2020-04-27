@@ -40,8 +40,8 @@ if args.gzip:
 	o1 = gzip.open(args.out1, "wb")
 	o2 = gzip.open(args.out2, "wb")
 else:
-	o1 = open(args.out1)
-	o2 = open(args.out2)
+	o1 = open(args.out1,"w")
+	o2 = open(args.out2,"w")
 
 print ("start....")
 for f1, f2 in zip(args.read1, args.read2):
