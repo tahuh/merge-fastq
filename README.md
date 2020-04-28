@@ -6,6 +6,7 @@ python 2.7 or higher (python3 available)
 
 ## Usage
 
+### FOR Paired End read 
 ```
 usage: mergefastq_pe.py [-h] -i READ1 -I READ2 -o OUT1 -O OUT2 [-g]
 
@@ -21,6 +22,7 @@ optional arguments:
 
 
 Example usage to merge 3 paired end reads into one paired end reads
+
 python mergefastq_pt.py \
 --read1 A.read1.fastq.gz \
 --read2 A.read2.fastq.gz \
@@ -33,6 +35,26 @@ python mergefastq_pt.py \
 --gzip
 ```
 
+### FOR Single End read
+```
+usage: mergefastq_se.py [-h] -i READ -o OUT [-g]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i READ, --read READ  Read1 file. Can be applied many
+  -o OUT, --out OUT     Output file1
+  -g, --gzip            Output gzip file
+
+
+Example usage to merge 3 paired end reads into one paired end reads
+
+python mergefastq_pt.py \
+--read A.fastq.gz \
+--read B.fastq.gz \
+--read C.fastq.gz \
+--out ALL.fastq.gz \
+--gzip
+```
 ## License
 MIT
 
