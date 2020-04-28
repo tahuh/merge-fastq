@@ -46,7 +46,7 @@ optional arguments:
   -g, --gzip            Output gzip file
 
 
-Example usage to merge 3 paired end reads into one paired end reads
+Example usage to merge 3 single end reads into one single end reads
 
 python mergefastq_se.py \
 --read A.fastq.gz \
