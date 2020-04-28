@@ -23,7 +23,7 @@ optional arguments:
 
 Example usage to merge 3 paired end reads into one paired end reads
 
-python mergefastq_pt.py \
+python mergefastq_pe.py \
 --read1 A.read1.fastq.gz \
 --read2 A.read2.fastq.gz \
 --read1 B.read1.fastq.gz \
@@ -48,7 +48,7 @@ optional arguments:
 
 Example usage to merge 3 paired end reads into one paired end reads
 
-python mergefastq_pt.py \
+python mergefastq_se.py \
 --read A.fastq.gz \
 --read B.fastq.gz \
 --read C.fastq.gz \
